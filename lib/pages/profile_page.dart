@@ -196,12 +196,11 @@ class _ProfilePageState extends State<ProfilePage> {
   _showUserInfo() {
     DataUtils.isLogin().then((isLogin) {
       if (isLogin) {
-        DataUtils.getUserJsonString().then((data) {
-          if (null != data) {
-            Map<String, dynamic> map = json.decode(data);
+        DataUtils.getUserInfo().then((user) {
+          if (null != user) {
             setState(() {
-              userAvatar = map['avatar'];
-              userName = map['name'];
+              userAvatar = user.avatar;
+              userName = user.name;
             });
           } else {
             setState(() {
