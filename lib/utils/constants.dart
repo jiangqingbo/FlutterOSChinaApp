@@ -12,9 +12,9 @@ abstract class AppColors {
 
 abstract class AppInfos {
   //应用id
-  static const String CLIENT_ID = 'GZBDubRTluvPuvA4vfce';
+  static const String CLIENT_ID = '开源中国申请的应用ID';
   //应用密钥
-  static const String CLIENT_SECRET = 'CZRXLpGtBuwlGrr4Q3jkEokDPZ6TjovH';
+  static const String CLIENT_SECRET = '开源中国申请的应用私钥';
   //回调地址
   static const String REDIRECT_URI = 'http://www.huyunit.com/';
 }
@@ -36,4 +36,8 @@ abstract class AppUrls {
   static const String MESSAGE_LIST = HOST + '/action/openapi/message_list';
   //评论
   static const String COMMENT_LIST = HOST + '/action/openapi/comment_list';
+
+  //资讯
+  static const String NEWS_LIST = HOST + '/action/openapi/news_list';
+
 }

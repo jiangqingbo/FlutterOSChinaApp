@@ -78,6 +78,7 @@ class MyDrawer extends StatelessWidget {
   }
 
   _navPush(BuildContext context, Widget page) {
+    Navigator.of(context).pop(); //把drawer收起
     Navigator.push(context, MaterialPageRoute(builder: (context) => page));
   }
 }

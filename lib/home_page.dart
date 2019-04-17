@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_oschina_demo/my_drawer.dart';
+import 'package:flutter_oschina_demo/widgets/my_drawer.dart';
 import 'package:flutter_oschina_demo/pages/profile_page.dart';
 import 'package:flutter_oschina_demo/pages/discovery_page.dart';
 import 'package:flutter_oschina_demo/pages/news_list_page.dart';
 import 'package:flutter_oschina_demo/pages/tweet_page.dart';
 import 'package:flutter_oschina_demo/utils/constants.dart' show AppColors;
-import 'package:flutter_oschina_demo/widgets/NavigationIconView.dart';
+import 'package:flutter_oschina_demo/widgets/navigation_icon_view.dart';
 
 ///
 /// author: bobo

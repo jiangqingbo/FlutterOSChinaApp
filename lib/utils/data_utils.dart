@@ -24,7 +24,7 @@ class DataUtils {
   static const String SP_USER_URL = 'url';
   static const String SP_USER_JSON_STRING = 'user_json_string';
 
-//  {"access_token":"aa105aaf-ca4f-4458-822d-1ae6a1fa33f9","refresh_token":"daae8b80-3ca6-4514-a8ae-acb3a82c951c","uid":2006874,"token_type":"bearer","expires_in":510070}
+//  {"access_token":"aa105aaf-ca4f-4458-822d-1ae6a1faaaaa","refresh_token":"daae8b80-3ca6-4514-a8ae-acb3a82ccccc","uid":2006874,"token_type":"bearer","expires_in":510070}
   static Future<void> saveLoginInfo(Map<String, dynamic> map) async {
     if (map != null && map.isNotEmpty) {
       SharedPreferences sp = await SharedPreferences.getInstance();
