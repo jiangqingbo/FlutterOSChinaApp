@@ -25,11 +25,20 @@ class _NewsListPageState extends State<NewsListPage> {
   int curPage = 1;
   List newsList;
 
-  ScrollController _scrollController;
+  ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
+    _scrollController.addListener((){
+      var maxScroll = _scrollController.position.maxScrollExtent;
+      var pixels = _scrollController.position.pixels;
+      if(maxScroll == pixels){
+        curPage++;
+        getNewsList(true);
+      }
+    });
+
     DataUtils.isLogin().then((isLogin) {
       if (!mounted) return;
       setState(() {
@@ -50,15 +59,6 @@ class _NewsListPageState extends State<NewsListPage> {
         this.isLogin = false;
       });
     });
-
-    _scrollController = ScrollController()
-      ..addListener(() {
-        //判断是否滑到底
-        if (_scrollController.position.pixels ==
-            _scrollController.position.maxScrollExtent) {
-          _loadMore();
-        }
-      });
   }
 
   @override
@@ -92,7 +92,6 @@ class _NewsListPageState extends State<NewsListPage> {
     }
 
     return RefreshIndicator(
-      displacement: 10.0,
       onRefresh: _pullToRefresh,
       child: buildListView(),
     );
@@ -160,8 +159,4 @@ class _NewsListPageState extends State<NewsListPage> {
     return null;
   }
 
-  Future _loadMore() async {
-    curPage += 1;
-    getNewsList(true);
-  }
 }

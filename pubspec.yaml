@@ -31,6 +31,8 @@ dependencies:
   fluttertoast: ^3.0.3
   barcode_scan: ^1.0.0
   sensors: ^0.4.0+1
+  vibration: 1.0.2
+  image_picker: ^0.5.0+9
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +67,7 @@ flutter:
   - assets/images/ic_avatar_default.png
   #摇一摇背景图
   - assets/images/shake.png
+  - assets/images/ic_add_pics.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

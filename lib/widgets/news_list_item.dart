@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_oschina_demo/pages/news_detail_page.dart';
 
 ///
 /// author: bobo
@@ -7,7 +8,6 @@ import 'package:flutter/material.dart';
 ///
 
 class NewsListItem extends StatelessWidget {
-
   final Map<String, dynamic> newsList;
 
   NewsListItem({this.newsList});
@@ -16,9 +16,10 @@ class NewsListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        //TODO
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>NewsDetailPage(id: newsList['id'],)));
       },
       child: Container(
+        margin: EdgeInsets.only(left: 20.0),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
@@ -27,29 +28,46 @@ class NewsListItem extends StatelessWidget {
             ),
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(height: 10.0,),
-            Text('  ${newsList['title']}', style: TextStyle(color: Color(0xff000000), fontSize: 14.0, decoration: TextDecoration.none), textAlign: TextAlign.left,),
-            SizedBox(height: 10.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                    '   @${newsList['author']}      ${newsList['pubDate'].toString().split(' ')[0]}',
-                style: TextStyle(color: Color(0xff888888), fontSize: 12.0),),
-                Row(
-                  children: <Widget>[
-                    Icon(Icons.message, color: Color(0xff888888),),
-                    Text('${newsList['commentCount']}', style: TextStyle(color: Color(0xff888888), fontSize: 12.0),),
-                    SizedBox(width: 10.0,),
-                  ],
-                )
-              ],
-            ),
-            SizedBox(height: 10.0),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, right: 20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                '${newsList['title']}',
+                style: TextStyle(
+                    color: Color(0xff000000),
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    '@${newsList['author']}      ${newsList['pubDate'].toString().split(' ')[0]}',
+                    style: TextStyle(color: Color(0xff888888), fontSize: 12.0),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.message,
+                        color: Color(0xff888888),
+                      ),
+                      Text(
+                        '${newsList['commentCount']}',
+                        style:
+                            TextStyle(color: Color(0xff888888), fontSize: 12.0),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

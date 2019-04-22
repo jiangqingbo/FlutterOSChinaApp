@@ -20,7 +20,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
       '开源众包': Icons.pageview,
       '开源软件': Icons.speaker_notes_off,
       '码云推荐': Icons.screen_share,
-      '代码骗贷': Icons.assignment,
+      '代码片段': Icons.assignment,
     },
     {
       '扫一扫': Icons.camera_alt,
@@ -41,6 +41,21 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     switch (title) {
       case '开源众包':
         _navToWebPage(title, 'https://zb.oschina.net/');
+        break;
+      case '开源软件':
+        _navToWebPage(title, 'https://www.oschina.net/project');
+        break;
+      case '码云推荐':
+        _navToWebPage(title, 'https://gitee.com/explore/recommend/');
+        break;
+      case '代码片段':
+        _navToWebPage(title, 'https://gitee.com/gists');
+        break;
+      case '码云封面人物':
+        _navToWebPage(title, 'https://m.gitee.com/gitee-stars/');
+        break;
+      case '线下活动':
+        _navToWebPage(title, 'https://www.oschina.net/event?tab=latest&city=全国&time=all');
         break;
       case '扫一扫':
         scan();

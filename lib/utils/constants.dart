@@ -12,11 +12,11 @@ abstract class AppColors {
 
 abstract class AppInfos {
   //应用id
-  static const String CLIENT_ID = '开源中国申请的应用ID';
+  static const String CLIENT_ID = 'GZBDubRTluvPuvA4vfce';
   //应用密钥
-  static const String CLIENT_SECRET = '开源中国申请的应用私钥';
+  static const String CLIENT_SECRET = 'CZRXLpGtBuwlGrr4Q3jkEokDPZ6TjovH';
   //回调地址
-  static const String REDIRECT_URI = 'http://www.huyunit.com/';
+  static const String REDIRECT_URI = 'https://github.com/jiangqingbo/';
 }
 
 abstract class AppUrls {
@@ -39,5 +39,9 @@ abstract class AppUrls {
 
   //资讯
   static const String NEWS_LIST = HOST + '/action/openapi/news_list';
+  static const String NEWS_DETAIL = HOST + '/action/openapi/news_detail';
+  //动弹
+  static const String TWEET_LIST = HOST + '/action/openapi/tweet_list';
+  static const String TWEET_PUB = HOST + '/action/openapi/tweet_pub';
 
 }
