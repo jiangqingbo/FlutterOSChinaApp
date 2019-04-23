@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter_oschina_demo/pages/common_web_page.dart';
 import 'package:flutter_oschina_demo/pages/shake_page.dart';
+import 'package:flutter_oschina_demo/pages/test_flutter_plugin_activity_page.dart';
+import 'package:flutter_oschina_demo/pages/test_flutter_toast_plugin_page.dart';
 
 ///
 /// author: bobo
@@ -29,6 +31,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     {
       '码云封面人物': Icons.person,
       '线下活动': Icons.android,
+    },
+    {
+      '自定义Toast': Icons.sentiment_neutral,
+      '跳转Activity': Icons.sentiment_neutral,
+      '带参数跳转Activity': Icons.sentiment_neutral,
     }
   ];
 
@@ -63,6 +70,18 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
       case '摇一摇':
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => ShakePage()));
+        break;
+      case '自定义Toast':
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => TestFlutterToastPluginPage()));
+        break;
+      case '跳转Activity':
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => TestFlutterPluginActivityPage()));
+        break;
+      case '带参数跳转Activity':
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => TestFlutterPluginActivityPage()));
         break;
     }
   }

@@ -45,6 +45,10 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+#  plugin:
+#    androidPackage: com.huyunit.flutter.flutter_oschina_demo
+#    pluginClass: FlutterToastPlugin
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
