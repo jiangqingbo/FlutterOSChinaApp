@@ -40,8 +40,8 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
   ];
 
   Future scan() async {
-    String barcode = await BarcodeScanner.scan();
-    print('扫一扫结果：$barcode');
+    var result = await BarcodeScanner.scan();
+    print('扫一扫结果：${result.rawContent}');
   }
 
   void _handleItemClick(String title) {

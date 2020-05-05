@@ -13,7 +13,7 @@ class ToastUtils {
       msg: message,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
-      timeInSecForIos: 1,
+      timeInSecForIosWeb: 1,
       backgroundColor: Color(0xff8c8c8c),
       textColor: Color(0xff333333),
       fontSize: 16.0,

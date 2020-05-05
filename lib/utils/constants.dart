@@ -12,9 +12,9 @@ abstract class AppColors {
 
 abstract class AppInfos {
   //应用id
-  static const String CLIENT_ID = '开源中国应用id';
+  static const String CLIENT_ID = 'GZBDubRTluvPuvA4vfce';
   //应用密钥
-  static const String CLIENT_SECRET = '开源中国应用密钥';
+  static const String CLIENT_SECRET = 'CZRXLpGtBuwlGrr4Q3jkEokDPZ6TjovH';
   //回调地址
   static const String REDIRECT_URI = 'https://github.com/jiangqingbo/';
 }
